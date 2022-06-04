@@ -4,10 +4,17 @@ import kotlin.math.max
 
 class BestTimeToBuyAndSellStock {
 
-    fun maxProfit(prices: IntArray): Int =
+    fun maxProfit(prices: IntArray): Int {
+        val maxes = IntArray(prices.size + 1)
+        maxes[prices.size] = 0
         prices
-            .foldRight(listOf(0)) { price, maxPrices -> listOf(max(price, maxPrices.first())) + maxPrices }
-            .dropLast(1)
+            .indices
+            .reversed()
+            .forEach { i ->
+                maxes[i] = max(prices[i], maxes[i + 1])
+            }
+        return maxes
             .zip(prices.toList()) { a, b -> a - b }
             .maxOrNull()!!
+    }
 }
