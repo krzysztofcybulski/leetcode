@@ -1,4 +1,4 @@
-package me.kcybulski.leetcode.array
+package me.kcybulski.leetcode.binary
 
 class SumOfTwoIntegers {
     fun getSum(a: Int, b: Int): Int {

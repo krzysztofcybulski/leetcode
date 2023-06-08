@@ -1,4 +1,4 @@
-package me.kcybulski.leetcode.array
+package me.kcybulski.leetcode.binary
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
