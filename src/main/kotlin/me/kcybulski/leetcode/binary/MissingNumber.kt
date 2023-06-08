@@ -2,6 +2,6 @@ package me.kcybulski.leetcode.binary
 
 class MissingNumber {
     fun missingNumber(nums: IntArray): Int {
-        return 0
+        return ((nums.size + 1) * nums.size) / 2 - nums.sum()
     }
 }
